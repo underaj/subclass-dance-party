@@ -1,7 +1,6 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var FatDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.time = timeBetweenSteps;
-  this.that = this;
+
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
   // this.setPosition(top, left);
@@ -18,11 +17,13 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   //   // other effects you can use on a jQuery-wrapped html tag.
   //   this.$node.toggle();
   // };
+
+  this.$node.addClass('fatDancer');
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+FatDancer.prototype = Object.create(makeDancer.prototype);
 
-makeBlinkyDancer.prototype.step = function(timeBetweenSteps) {
+FatDancer.prototype.step = function(timeBetweenSteps) {
   
   makeDancer.prototype.step.call(this, timeBetweenSteps);
   
