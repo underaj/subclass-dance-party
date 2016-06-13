@@ -9,7 +9,6 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    console.log(this);
     setTimeout(this.step, timeBetweenSteps);
   };
   this.step();
