@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addMarioButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -22,30 +22,42 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(dancer.$node);
+    // var dancer = new dancerMakerFunction(
+    //   $('body').height() * Math.random(),
+    //   $('body').width() * Math.random(),
+    //   Math.random() * 1000
+    // );
+    // $('body').append(dancer.$node);
+
+    var mario = new dancerMakerFunction('75%', '0%', 2000);
+    $('body').append(mario.$node);
+
   });
 
-  // var marioCenterStyle = {
-  //   position: relative
-  // };
-    
-
-  // $(document.body).on('click', '.vertical', function() { 
-  //   console.log($('.dancer'));
-  //   $('.dancer').css(marioCenterStyle);
-  // });  
-  
-  $(document.body).on('click', '.center', function() {
+// move mario up on click 
+  $(document.body).on('click', '.up', function() {
     var dancers = $('.dancer');
     for ( var i = 0; i < dancers.length; i++) {
-      $(dancers[i]).css({top: '50%', 'left': i * 100 });
+      $(dancers[i]).css({top: '71%'});
     }
   });
+// move mario down on click
+  $(document.body).on('click', '.down', function() {
+    var dancers = $('.dancer');
+    for ( var i = 0; i < dancers.length; i++) {
+      $(dancers[i]).css({top: '75%'});
+    }
+  });
+
+  //move mario forward or backward
+  $( '#right' ).click(function() {
+    $( '.mario' ).animate({ 'left': '+=50px' }, 'slow' );
+  });
+ 
+  $( '#left' ).click(function() {
+    $( '.mario' ).animate({ 'left': '-=50px' }, 'slow' );
+  });
+
 
 });
 

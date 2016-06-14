@@ -3,6 +3,9 @@
   <head>
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <audio controls>
+      <source class="song" src="media/mario.mp3" type="audio/mpeg">
+    </audio>
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
@@ -12,14 +15,21 @@
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a> 
+      <span class="title">Mario Party</span>
+        <button id="left">&laquo;</button>
+        <button id="right">&raquo;</button>
+      <!-- <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a> 
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FatDancer">add a Fat dancer</a>  
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="SkinnyDancer">add a Skinny dancer</a>  
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Mario">add a Mario</a>
-      <a href="#" class="center" >Center</a>
-      <a href="#" class="vertical" >Vertical</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="SkinnyDancer">add a Skinny dancer</a>   -->
+      <a href="#" class="marioButton addMarioButton" data-dancer-maker-function-name="Mario">Bring out Mario!</a>
+      <a href="#" class="center up" >Jump Up</a>
+      <a href="#" class="center down" >Jump Down</a>
+
     </div>
     <script src="src/init.js"></script>
+    <img id="box1" class="box" src="photos/box.gif" alt="Mario Box">
+    <img id="box2" class="box" src="photos/box.gif" alt="Mario Box">
+    <img id="box3" class="box" src="photos/box.gif" alt="Mario Box">
+    <img id="box4" class="box" src="photos/box.gif" alt="Mario Box">
   </body>
 </html>

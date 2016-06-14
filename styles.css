@@ -10,7 +10,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton {
+.title, .addMarioButton {
   padding:5px 12px;
   float:right;
 }
@@ -37,18 +37,81 @@ body, a:link, a:visited, a:active{
   background: green;
   border-radius: 50%;
 }
+/* ------ mario class --------- */
+.marioButton{
+  position: absolute;
+  left: 50%;
+
+}
+
 .mario{
   border: 0px;
   background-image: url("photos/giphy.gif");
   background-size: 100% 100%;
-  width: 100px;
-  height: 175px;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  width: 70px;
+  height: 90px;
+  /*-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;*/
 }
 .mario:hover {
-    width: 200px;
-    height: 350px;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    
+    /*-webkit-transform: rotate(360deg);
+    transform: rotate(360deg);*/
 }
+
+.mario {
+  position: absolute;
+  top: 75%;
+  left: 0%;
+  /*left: -200px;*/
+
+  /*z-index: 10;
+  animation-duration: 20s;
+  animation-name: goRight;
+  animation-iteration-count: infinite;*/
+}
+
+ /*key frames animation for mario to run accross screen*/
+@keyframes goRight {
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(2000px ,0);
+  }
+}
+
+/* ------ all the box's fixed positons --------- */
+
+#box1 {
+  position: absolute;
+  top: 51.1%;
+  left: 40%;
+  width: 2.5%;
+  height: 4.5%;
+  }
+
+  #box2 {
+  position: absolute;
+  top: 68.9%;
+  left: 25%;
+  width: 2.5%;
+  height: 4.5%;
+  }
+
+  #box3 {
+  position: absolute;
+  top: 68.9%;
+  left: 37.5%;
+  width: 2.5%;
+  height: 4.4%;
+  }
+
+  #box4 {
+  position: absolute;
+  top: 68.9%;
+  left: 42.5%;
+  width: 2.5%;
+  height: 4.4%;
+  }
