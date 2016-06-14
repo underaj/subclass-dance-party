@@ -29,5 +29,15 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+
+  var marioCenterStyle = {
+    top: '50%'
+  };
+
+  $(document.body).on('click', '.center', function() { 
+    console.log($('.dancer'));
+    $('.dancer').css(marioCenterStyle);
+  });  
+  
 });
 

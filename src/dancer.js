@@ -7,7 +7,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   // this one sets the position to some random default point within the body
   this.setPosition(top, left);
 };
-var that = this;
+
 
 makeDancer.prototype.step = function(timeBetweenSteps) {
   setTimeout( this.step.bind(this, timeBetweenSteps), timeBetweenSteps );

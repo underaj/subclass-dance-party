@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:white;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -28,4 +28,26 @@ body, a:link, a:visited, a:active{
 .fatDancer{
   border-radius:50px;
   border:50px solid blue;
+}
+.skinnyDancer{
+  width:10px;
+  height:20px;
+  border:0;
+  background: green;
+  border-radius: 50%;
+}
+.mario{
+  border: 0px;
+  background-image: url("photos/giphy.gif");
+  background-size: 100% 100%;
+  width: 100px;
+  height: 175px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+.mario:hover {
+    width: 200px;
+    height: 350px;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
