@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:white;
+  background-image:url("photos/background.jpg");
+  background-size:100% 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{

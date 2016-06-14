@@ -30,14 +30,22 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
-  var marioCenterStyle = {
-    top: '50%'
-  };
+  // var marioCenterStyle = {
+  //   position: relative
+  // };
+    
 
-  $(document.body).on('click', '.center', function() { 
-    console.log($('.dancer'));
-    $('.dancer').css(marioCenterStyle);
-  });  
+  // $(document.body).on('click', '.vertical', function() { 
+  //   console.log($('.dancer'));
+  //   $('.dancer').css(marioCenterStyle);
+  // });  
   
+  $(document.body).on('click', '.center', function() {
+    var dancers = $('.dancer');
+    for ( var i = 0; i < dancers.length; i++) {
+      $(dancers[i]).css({top: '50%', 'left': i * 100 });
+    }
+  });
+
 });
 
