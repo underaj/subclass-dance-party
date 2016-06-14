@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
 
-  $('.addMarioButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -29,17 +29,19 @@ $(document).ready(function() {
     // );
     // $('body').append(dancer.$node);
 
-    var mario = new dancerMakerFunction('75%', '0%');
-    $('body').append(mario.$node);
+    var character = new dancerMakerFunction('75%', '0%', 500);
+    $('body').append(character.$node);
+
 
   });
 
 //make a new luigi 
-  $(document.body).on('click', '.yoshiButton', function() {
-    var yoshi = new Yoshi('75%', '0%', 2000);
-    $('body').append(yoshi.$node);
+  // $('.yoshiButton').on('click', function() {
+  //   var yoshi = new Yoshi('75%', '0%', 2000);
+  //   console.log(Yoshi);
+  //   $('body').append(yoshi.$node);
 
-  });
+  // });
   
 
 
@@ -48,7 +50,10 @@ $(document).ready(function() {
   $(document.body).on('click', '.up', function() {
     var dancers = $('.dancer');
     for ( var i = 0; i < dancers.length; i++) {
-      $(dancers[i]).css({top: '71%'});
+      $(dancers[i]).addClass('marioJump');
+      setTimeout(function() {
+        $('.mario').removeClass('marioJump');
+      }, 1000);
     }
   });
 // move mario down on click
