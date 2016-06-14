@@ -1,4 +1,4 @@
-var FatDancer = function(top, left, timeBetweenSteps) {
+var SkinnyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -18,14 +18,23 @@ var FatDancer = function(top, left, timeBetweenSteps) {
   //   this.$node.toggle();
   // };
 
-  this.$node.addClass('fatDancer');
+  this.$node.addClass('skinnyDancer');
+  
+  this.$node.on('click', function(){
+    console.log(this);
+    $(this).css({
+      'background': 'yellow'
+    });
+  });
 };
 
-FatDancer.prototype = Object.create(makeDancer.prototype);
+SkinnyDancer.prototype = Object.create(makeDancer.prototype);
 
-FatDancer.prototype.step = function(timeBetweenSteps) {
+SkinnyDancer.prototype.step = function(timeBetweenSteps) {
   makeDancer.prototype.step.call(this, timeBetweenSteps);
-  this.$node.toggle();
+  // this.$node.css("background",'blue');
+
 };
 
-FatDancer.prototype.constructor = FatDancer;
+SkinnyDancer.prototype.constructor = SkinnyDancer;
+
