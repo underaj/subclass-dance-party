@@ -14,10 +14,15 @@ Mario.prototype.step = function(timeBetweenSteps) {
   var mario = this.$node.position();
   var boxPosition = $('#box2').position();
     // do something
-  if (mario.top < boxPosition.top + 25 && mario.top > boxPosition.top - 25 && mario.left < boxPosition.left + 25 && mario.left > boxPosition.left - 25) {
-    $('#box2').animate({top: '-=100'});
-    $('#box2').animate({top: '+=100'});
-  } else {
+  if (mario.top < boxPosition.top + 25 && mario.top > boxPosition.top - 25 && mario.left < boxPosition.left + 25 && mario.left > boxPosition.left - 40) {
+    $('#box2').animate({top: '-=50'});
+    $('#coin').toggle();
+    $('#coin').animate({top: '-=80'});
+    $('#box2').animate({top: '+=50'});
+    $('#coin').animate({top: '+=80'});
+    setTimeout(function() {
+      $('#coin').toggle();
+    }, 1000);
   }
 };
 

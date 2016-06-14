@@ -28,22 +28,40 @@ $(document).ready(function() {
     //   Math.random() * 1000
     // );
     // $('body').append(dancer.$node);
+    var character;
+    if ( dancerMakerFunctionName === 'Bowser') {
+      character = new dancerMakerFunction('75%', '50%', 50);
+    } else {
+      character = new dancerMakerFunction('79%', '0%', 500);
+    }
 
-    var character = new dancerMakerFunction('75%', '0%', 500);
     $('body').append(character.$node);
+  });
 
+// need to add keyboard controls
+  
+  $(document.body).on('keydown', function(e) {
+    if (e.keyCode === 37) {
+      //left
+      // $( '.mario' ).animate({ 'left': '-=20px' }, 'fast' );
+      $('.mario').css({left: '-=5', transform: 'scaleX(-1)'});
+    }
+    if (e.keyCode === 39) {
+      //right
+      // $( '.mario' ).animate({ 'left': '+=20px' }, 'fast' );
+      $('.mario').css({left: '+=5', transform: 'scaleX(1)'});
+    }
 
   });
 
-//make a new luigi 
-  // $('.yoshiButton').on('click', function() {
-  //   var yoshi = new Yoshi('75%', '0%', 2000);
-  //   console.log(Yoshi);
-  //   $('body').append(yoshi.$node);
-
-  // });
-  
-
+  $(document.body).on('keyup', function(e) {
+    if ( e.keyCode === 32 ) {
+      $('.mario').addClass('marioJump');
+      setTimeout(function() {
+        $('.mario').removeClass('marioJump');
+      }, 1000);
+    }
+  });
 
 
 // move mario up on click 
@@ -55,22 +73,6 @@ $(document).ready(function() {
         $('.mario').removeClass('marioJump');
       }, 1000);
     }
-  });
-// move mario down on click
-  $(document.body).on('click', '.down', function() {
-    var dancers = $('.dancer');
-    for ( var i = 0; i < dancers.length; i++) {
-      $(dancers[i]).css({top: '75%'});
-    }
-  });
-
-  //move mario forward or backward
-  $( '#right' ).click(function() {
-    $( '.mario' ).animate({ 'left': '+=50px' }, 'slow' );
-  });
- 
-  $( '#left' ).click(function() {
-    $( '.mario' ).animate({ 'left': '-=50px' }, 'slow' );
   });
 
 
