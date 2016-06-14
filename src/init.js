@@ -29,10 +29,20 @@ $(document).ready(function() {
     // );
     // $('body').append(dancer.$node);
 
-    var mario = new dancerMakerFunction('75%', '0%', 2000);
+    var mario = new dancerMakerFunction('75%', '0%');
     $('body').append(mario.$node);
 
   });
+
+//make a new luigi 
+  $(document.body).on('click', '.yoshiButton', function() {
+    var yoshi = new Yoshi('75%', '0%', 2000);
+    $('body').append(yoshi.$node);
+
+  });
+  
+
+
 
 // move mario up on click 
   $(document.body).on('click', '.up', function() {

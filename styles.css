@@ -71,6 +71,25 @@ body, a:link, a:visited, a:active{
   animation-iteration-count: infinite;*/
 }
 
+.yoshiButton {
+  position: absolute;
+  left: 40%;
+}
+
+.yoshi {
+  border: 0px;
+  background-image: url("photos/yoshi.gif");
+  background-size: 100% 100%;
+  width: 75px;
+  height: 95px;
+  left: -200px;
+
+  z-index: 10;
+  animation-duration: 20s;
+  animation-name: goRight;
+  animation-iteration-count: infinite;
+}
+
  /*key frames animation for mario to run accross screen*/
 @keyframes goRight {
   from {
