@@ -62,9 +62,21 @@ body, a:link, a:visited, a:active{
   50% {top: 65%;}
   100% {top: 75%;}
 }
+
+@keyframes jumpYoshi{
+  0%  {top: 75%;}
+  50% {top: 50%;}
+  100% {top: 75%;}
+}
+
 .marioJump {
   animation: jump 1s;
 }
+
+.marioYoshiJump {
+  animation: jumpYoshi 4s;
+}
+
 .yoshiButton {
   position: absolute;
   left: 40%;
@@ -131,6 +143,14 @@ body, a:link, a:visited, a:active{
 }
 
 /* ------ all the box's fixed positons --------- */
+#supercoin {
+  display: none;
+  position: absolute;
+  top: 51.1%;
+  left: 40%;
+  width: 2.5%;
+  height: 4.5%;
+}
 
 #coin {
   display: none;
@@ -164,35 +184,35 @@ body, a:link, a:visited, a:active{
   left: 40%;
   width: 2.5%;
   height: 4.5%;
-  }
+}
 
-  #box2 {
-  position: absolute;
+#box2 {
+position: absolute;
   top: 68.9%;
   left: 25%;
   width: 2.5%;
   height: 4.5%;
-  }
+}
 
-  #box3 {
+#box3 {
   position: absolute;
   top: 68.9%;
   left: 37.5%;
   width: 2.5%;
   height: 4.4%;
-  }
+}
 
-  #box4 {
+#box4 {
   position: absolute;
   top: 68.9%;
   left: 42.5%;
   width: 2.5%;
   height: 4.4%;
-  }
+}
 
 
-  .healthbar {
-    position: absolute;
-    left: 5%;
-    font-size: 100px;
-  }
+.healthbar {
+  position: absolute;
+  left: 5%;
+  font-size: 100px;
+}

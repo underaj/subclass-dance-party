@@ -22,7 +22,7 @@ Bowser.prototype.step = function(timeBetweenSteps) {
     bowser.css({transform: 'scaleX(-1)'});
     this.direction = 'right';
 
-  } else if (bowserPosition.left > 800) {
+  } else if (bowserPosition.left > 1600) {
     bowser.css({transform: 'scaleX(1)'});
     this.direction = 'left';
   }
@@ -34,7 +34,7 @@ Bowser.prototype.step = function(timeBetweenSteps) {
       var health = $($('.mario')[0]).data('health');
       health = health - 1;
       $($('.mario')[0]).data('health', health);
-      console.log(health);
+      // decrease html health number
       $('.healthbar').html(health);
 
     // $($('.mario')[0]).data('health', health);

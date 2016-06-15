@@ -30,7 +30,8 @@ $(document).ready(function() {
     // $('body').append(dancer.$node);
     var character;
     if ( dancerMakerFunctionName === 'Bowser') {
-      character = new dancerMakerFunction('75%', '50%', 50);
+      var leftPos = (Math.random() * 100).toString() + '%';
+      character = new dancerMakerFunction('75%', leftPos, 50);
     } else {
       character = new dancerMakerFunction('79%', '0%', 500);
       character.$node.data('health', 30);
@@ -57,10 +58,18 @@ $(document).ready(function() {
 
   $(document.body).on('keyup', function(e) {
     if ( e.keyCode === 32 ) {
-      $('.mario').addClass('marioJump');
-      setTimeout(function() {
-        $('.mario').removeClass('marioJump');
-      }, 1000);
+      if ($('.mario').hasClass('normal')) {
+        $('.mario').addClass('marioJump');
+        setTimeout(function() {
+          $('.mario').removeClass('marioJump');
+        }, 1000);
+      } else {
+        $('.mario').addClass('marioYoshiJump');
+        setTimeout(function() {
+          $('.mario').removeClass('marioYoshiJump');
+        }, 4000);
+      }
+
     }
   });
 

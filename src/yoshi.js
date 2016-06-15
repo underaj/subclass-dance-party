@@ -16,6 +16,7 @@ Yoshi.prototype.step = function(timeBetweenSteps) {
     mario = $($('.mario')[0]).position();
     if (yoshi.left < mario.left + 100 && yoshi.left > mario.left - 100) {
       this.$node.css({display: 'none'});
+      $('.mario').removeClass('normal');
       $('.mario').css({ 'background-image': 'url(photos/marioyoshi.gif)'});
     } 
   }
