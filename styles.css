@@ -59,7 +59,7 @@ body, a:link, a:visited, a:active{
 
 @keyframes jump{
   0%  {top: 75%;}
-  50% {top: 70%;}
+  50% {top: 65%;}
   100% {top: 75%;}
 }
 .marioJump {
@@ -141,6 +141,23 @@ body, a:link, a:visited, a:active{
   height: 4.5%;
 }
 
+#coin2 {
+  display: none;
+  position: absolute;
+  top: 66%;
+  left: 37.5%;
+  width: 2.5%;
+  height: 4.5%;
+}
+
+#coin3 {
+  display: none;
+  position: absolute;
+  top: 66%;
+  left: 42.5%;
+  width: 2.5%;
+  height: 4.5%;
+}
 #box1 {
   position: absolute;
   top: 51.1%;
@@ -171,4 +188,11 @@ body, a:link, a:visited, a:active{
   left: 42.5%;
   width: 2.5%;
   height: 4.4%;
+  }
+
+
+  .healthbar {
+    position: absolute;
+    left: 5%;
+    font-size: 100px;
   }

@@ -33,6 +33,7 @@ $(document).ready(function() {
       character = new dancerMakerFunction('75%', '50%', 50);
     } else {
       character = new dancerMakerFunction('79%', '0%', 500);
+      character.$node.data('health', 30);
     }
 
     $('body').append(character.$node);
@@ -63,18 +64,6 @@ $(document).ready(function() {
     }
   });
 
-
-// move mario up on click 
-  $(document.body).on('click', '.up', function() {
-    var dancers = $('.dancer');
-    for ( var i = 0; i < dancers.length; i++) {
-      $(dancers[i]).addClass('marioJump');
-      setTimeout(function() {
-        $('.mario').removeClass('marioJump');
-      }, 1000);
-    }
-  });
-
-
+ 
 });
 
